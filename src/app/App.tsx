@@ -106,7 +106,7 @@ export default function App() {
               <Mail className="w-4 h-4" />
               Get in Touch
             </Button>
-            <Button variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suya-htambe', '_blank')}>
+            <Button variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suyashtambe', '_blank')}>
               <Github className="w-4 h-4" />
               GitHub
             </Button>
