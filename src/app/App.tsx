@@ -39,7 +39,7 @@ export default function App() {
       description: 'Built an exciting quote generator combining machine learning text generation techniques using the GPT-2 model. Trained a custom GPT-2 model for over 72 hours on a large quotes dataset. The model accepts input tags describing the desired quote and generates personalized quotes. Created with React frontend and Python backend. Planning to incorporate a hybrid model of GPT-2 and RNN for enhanced performance.',
       image: 'https://images.unsplash.com/photo-1569229418947-25d933730929?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdW90ZXMlMjBpbnNwaXJhdGlvbiUyMHRleHQlMjB3cml0aW5nfGVufDF8fHx8MTc3MDgxOTY1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['GPT-2', 'NLP', 'React', 'Python'],
-      link: '#',
+      link: 'https://github.com/suyashtambe/Image-captionz',
     },
     {
       title: 'Secure ML Inference using OP-TEE',
@@ -244,7 +244,7 @@ export default function App() {
               <Linkedin className="w-4 h-4" />
               LinkedIn
             </Button>
-            <Button size="lg" variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suya-htambe', '_blank')}>
+            <Button size="lg" variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suyashtambe', '_blank')}>
               <Github className="w-4 h-4" />
               GitHub
             </Button>
