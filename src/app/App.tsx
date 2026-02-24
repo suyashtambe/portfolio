@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink, Code2, Brain, Cloud, Wrench } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code2, Brain, Cloud, Wrench, BarChart3, Zap, Users, Target, Award, FileText } from 'lucide-react';
 import { Card } from './components/ui/card';
 import { Badge } from './components/ui/badge';
 import { Button } from './components/ui/button';
@@ -10,6 +10,13 @@ export default function App() {
     { name: 'AI/ML', icon: Brain, items: ['Machine Learning', 'Deep Learning', 'NLP', 'PyTorch', 'CNNs', 'Transformers', 'GPT-2'] },
     { name: 'MLOps & Big Data', icon: Wrench, items: ['CI/CD', 'Hadoop', 'Spark', 'PySpark', 'MLlib', 'Model Versioning', 'Monitoring'] },
     { name: 'Cloud & Infrastructure', icon: Cloud, items: ['AWS', 'Google Cloud', 'Deployment', 'Logging', 'HDFS'] },
+  ];
+
+  const softSkills = [
+    { name: 'Data & Analysis', icon: BarChart3, items: ['Data interpretation', 'Pattern analysis', 'Reporting', 'Excel/SQL basics'] },
+    { name: 'Optimization & Performance', icon: Zap, items: ['Workflow optimization', 'Performance monitoring', 'ROI-focused thinking'] },
+    { name: 'Collaboration & Communication', icon: Users, items: ['Stakeholder coordination', 'Documentation', 'Cross-team collaboration'] },
+    { name: 'Core Strengths', icon: Target, items: ['Analytical thinking', 'Troubleshooting', 'Attention to detail', 'Multitasking'] },
   ];
 
   const projects = [
@@ -39,7 +46,7 @@ export default function App() {
       description: 'Built an exciting quote generator combining machine learning text generation techniques using the GPT-2 model. Trained a custom GPT-2 model for over 72 hours on a large quotes dataset. The model accepts input tags describing the desired quote and generates personalized quotes. Created with React frontend and Python backend. Planning to incorporate a hybrid model of GPT-2 and RNN for enhanced performance.',
       image: 'https://images.unsplash.com/photo-1569229418947-25d933730929?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxxdW90ZXMlMjBpbnNwaXJhdGlvbiUyMHRleHQlMjB3cml0aW5nfGVufDF8fHx8MTc3MDgxOTY1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['GPT-2', 'NLP', 'React', 'Python'],
-      link: 'https://github.com/suyashtambe/Image-captionz',
+      link: '#',
     },
     {
       title: 'Secure ML Inference using OP-TEE',
@@ -106,7 +113,7 @@ export default function App() {
               <Mail className="w-4 h-4" />
               Get in Touch
             </Button>
-            <Button variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suyashtambe', '_blank')}>
+            <Button variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suya-htambe', '_blank')}>
               <Github className="w-4 h-4" />
               GitHub
             </Button>
@@ -130,6 +137,35 @@ export default function App() {
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition">
                       <Icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                    </div>
+                    <h4 className="font-semibold text-slate-200">{category.name}</h4>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.items.map((item) => (
+                      <Badge key={item} variant="secondary" className="text-xs bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700">
+                        {item}
+                      </Badge>
+                    ))}
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Soft Skills Section */}
+      <section className="py-20 px-6 relative z-10 bg-slate-900/30">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl mb-12 text-center bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">Professional Skills</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {softSkills.map((category) => {
+              const Icon = category.icon;
+              return (
+                <Card key={category.name} className="p-6 bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-pink-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] group">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:from-pink-500/30 group-hover:to-cyan-500/30 transition">
+                      <Icon className="w-5 h-5 text-pink-400 group-hover:text-pink-300" />
                     </div>
                     <h4 className="font-semibold text-slate-200">{category.name}</h4>
                   </div>
@@ -190,7 +226,7 @@ export default function App() {
       {/* Experience Section */}
       <section className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Experience</h3>
+          <h3 className="text-3xl mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Professional Experience</h3>
           <div className="space-y-6">
             <Card className="p-6 bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)]">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
@@ -227,6 +263,157 @@ export default function App() {
         </div>
       </section>
 
+      {/* Leadership & Creative Experience Section */}
+      <section className="py-20 px-6 relative z-10 bg-slate-900/30">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Leadership & Creative Experience</h3>
+          <div className="space-y-6">
+            <Card className="p-6 bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h4 className="font-semibold text-slate-100">Videography Head & Photography Team Lead</h4>
+                  <p className="text-slate-400">Symbiosis Institute of Technology</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-slate-400 text-sm list-disc list-inside">
+                <li>Led a creative team responsible for visual storytelling, event coverage, and digital media production</li>
+                <li>Coordinated planning, task delegation, and content delivery under strict deadlines</li>
+                <li>Enhanced audience engagement through visual content strategy and creative direction</li>
+                <li>Collaborated with event organizers and student teams to ensure timely execution and quality output</li>
+              </ul>
+            </Card>
+
+            <Card className="p-6 bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-pink-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h4 className="font-semibold text-slate-100">Design Head</h4>
+                  <p className="text-slate-400">Mathelets Club - Symbiosis Institute of Technology</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-slate-400 text-sm list-disc list-inside">
+                <li>Spearheaded design initiatives for club events, promotional materials, and digital content</li>
+                <li>Managed the creative direction and visual identity of mathematics-focused student activities</li>
+                <li>Collaborated with team members to create engaging and educational content for club members</li>
+              </ul>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications & Patent Section */}
+      <section className="py-20 px-6 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Certifications & Patent</h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Certifications */}
+            <Card className="p-6 bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)]">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center">
+                  <Award className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h4 className="text-xl font-semibold text-slate-100">Certifications</h4>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-slate-300">
+                  <span className="text-cyan-400 mt-1">•</span>
+                  <div className="flex-1">
+                    <span>IBM Artificial Intelligence Fundamentals</span>
+                    <a 
+                      href="https://www.credly.com/badges/your-ai-fundamentals-badge-id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
+                    >
+                      Credly <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <span className="text-cyan-400 mt-1">•</span>
+                  <div className="flex-1">
+                    <span>IBM Data Fundamentals</span>
+                    <a 
+                      href="https://www.credly.com/badges/your-data-fundamentals-badge-id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
+                    >
+                      Credly <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <span className="text-cyan-400 mt-1">•</span>
+                  <div className="flex-1">
+                    <span>Google Cloud Skill Badges</span>
+                    <a 
+                      href="https://www.credly.com/badges/your-google-cloud-badge-id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
+                    >
+                      Credly <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-slate-300">
+                  <span className="text-cyan-400 mt-1">•</span>
+                  <div className="flex-1">
+                    <span>IBM Introduction to Software Engineering</span>
+                    <a 
+                      href="https://www.credly.com/badges/your-software-engineering-badge-id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
+                    >
+                      Credly <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </Card>
+
+            {/* Patent */}
+            <Card className="p-6 bg-slate-900/50 border-slate-800 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-purple-400" />
+                </div>
+                <h4 className="text-xl font-semibold text-slate-100">Patent Publication</h4>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <h5 className="font-semibold text-slate-200 mb-2">System and Method for Multimodal DeepFake Detection</h5>
+                  <p className="text-sm text-slate-400 mb-3">Using Computer-Implemented Deep Learning Architecture</p>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Application No:</span>
+                    <span className="text-slate-300">202521111135 A</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Filing Date:</span>
+                    <span className="text-slate-300">13/11/2025</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Publication Date:</span>
+                    <span className="text-slate-300">19/12/2025</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">Country:</span>
+                    <span className="text-slate-300">India</span>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-slate-700">
+                  <p className="text-xs text-slate-500">Co-inventors from Symbiosis International (Deemed University)</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -244,7 +431,7 @@ export default function App() {
               <Linkedin className="w-4 h-4" />
               LinkedIn
             </Button>
-            <Button size="lg" variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suyashtambe', '_blank')}>
+            <Button size="lg" variant="outline" className="gap-2 border-slate-700 text-slate-300 hover:text-cyan-400 hover:border-cyan-400" onClick={() => window.open('https://github.com/suya-htambe', '_blank')}>
               <Github className="w-4 h-4" />
               GitHub
             </Button>
