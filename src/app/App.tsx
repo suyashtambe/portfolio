@@ -320,7 +320,7 @@ export default function App() {
                   <div className="flex-1">
                     <span>IBM Artificial Intelligence Fundamentals</span>
                     <a 
-                      href="https://www.credly.com/badges/your-ai-fundamentals-badge-id"
+                      href="https://www.credly.com/badges/eb132931-19e8-4f55-a1f6-1063c2a8c818/public_url"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
@@ -334,7 +334,7 @@ export default function App() {
                   <div className="flex-1">
                     <span>IBM Data Fundamentals</span>
                     <a 
-                      href="https://www.credly.com/badges/your-data-fundamentals-badge-id"
+                      href="https://www.credly.com/badges/431e1b57-ccde-4daa-8485-e48ef51e82c8/public_url"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
@@ -348,7 +348,7 @@ export default function App() {
                   <div className="flex-1">
                     <span>Google Cloud Skill Badges</span>
                     <a 
-                      href="https://www.credly.com/badges/your-google-cloud-badge-id"
+                      href="https://www.credly.com/users/suyash-tambe.f3da3e2b/badges#credly"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
@@ -362,7 +362,7 @@ export default function App() {
                   <div className="flex-1">
                     <span>IBM Introduction to Software Engineering</span>
                     <a 
-                      href="https://www.credly.com/badges/your-software-engineering-badge-id"
+                      href="https://www.credly.com/badges/0c916dd9-8d87-45bf-a290-24ebd3bfc071"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="ml-2 text-cyan-400 hover:text-cyan-300 text-sm inline-flex items-center gap-1"
